@@ -9,8 +9,7 @@
   <version>1.0-SNAPSHOT</version>
 
   <name>DataStructuresDemo</name>
-  <!-- FIXME change it to the project's website -->
-  <url>http://www.example.com</url>
+  <url>https://wukegan.fallon.io</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -68,6 +67,33 @@
         <plugin>
           <artifactId>maven-project-info-reports-plugin</artifactId>
           <version>3.0.0</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-javadoc-plugin</artifactId>
+          <version>3.2.0</version>
+          <configuration>
+            <tags>
+              <tag>
+                <name>chapter</name>
+                <!-- Specifies chapter where exercise was found.-->
+                <placement>a</placement>
+                <head>Chapter:</head>
+              </tag>
+              <tag>
+                <name>exercise</name>
+                <!-- Specifies exercise used to create method or class.-->
+                <placement>a</placement>
+                <head>Exercise:</head>
+              </tag>
+              <tag>
+                <name>project</name>
+                <!-- Specifies Project used to create method or class.-->
+                <placement>a</placement>
+                <head>Project:</head>
+              </tag>
+            </tags>
+          </configuration>
         </plugin>
       </plugins>
     </pluginManagement>
