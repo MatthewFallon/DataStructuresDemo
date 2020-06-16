@@ -1,5 +1,7 @@
 package io.fallon;
 
+import io.fallon.Chapter1.BagInterface;
+import io.fallon.Chapter2.ArrayBag;
 import io.fallon.prelude.Circle;
 import io.fallon.prelude.Circular;
 import org.junit.Test;
@@ -30,4 +32,25 @@ public class AppTest
         assertEquals(2, circle.getRadius(), 0.0);
         assertEquals(Math.PI * 4, circle.getArea(), 0.0);
     }
+
+//    /**
+//     * Tests the methods in ArrayBag.
+//     * @since 6/15/20
+//     * @chapter 2
+//     */
+//    @Test
+//    public void testArrayBag() {
+//        BagInterface<Integer> bag = new ArrayBag<>();
+//        int result = 0;
+//        for (int i = 0; i < 25; i++) {
+//            bag.add(i);
+//            result += i ;
+//        }
+//        Integer[] tempArray = bag.toArray();
+//        for (Integer each :
+//                tempArray) {
+//               result -= each;
+//        }
+//        assertEquals(result, 0, 0.0 );
+//    }
 }
