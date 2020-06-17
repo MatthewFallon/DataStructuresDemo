@@ -33,24 +33,27 @@ public class AppTest
         assertEquals(Math.PI * 4, circle.getArea(), 0.0);
     }
 
-//    /**
-//     * Tests the methods in ArrayBag.
-//     * @since 6/15/20
-//     * @chapter 2
-//     */
-//    @Test
-//    public void testArrayBag() {
-//        BagInterface<Integer> bag = new ArrayBag<>();
-//        int result = 0;
-//        for (int i = 0; i < 25; i++) {
-//            bag.add(i);
-//            result += i ;
-//        }
-//        Integer[] tempArray = bag.toArray();
-//        for (Integer each :
-//                tempArray) {
-//               result -= each;
-//        }
-//        assertEquals(result, 0, 0.0 );
-//    }
+    /**
+     * Tests the core methods in ArrayBag.
+     *
+     * Construction, addition, and returning an object array from the function.
+     *
+     * @since 6/15/20
+     * @chapter 2
+     */
+    @Test
+    public void testArrayBagCore() {
+        BagInterface<Integer> bag = new ArrayBag<>();
+        int result = 0;
+        for (int i = 0; i < 25; i++) {
+            bag.add(i);
+            result += i ;
+        } // result == 300
+        Object[] tempArray = bag.toArray();// Always returns Object array of Integers
+        for (Object each :
+                tempArray) {
+               result -= (Integer) each; // last minute type-conversion.
+        } // result should equal 0 again.
+        assertEquals(result, 0, 0.0 );
+    }
 }

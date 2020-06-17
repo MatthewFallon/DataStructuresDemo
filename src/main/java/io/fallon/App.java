@@ -20,17 +20,6 @@ public class App
      */
     public static void main( String[] args )
     {
-        BagInterface<Integer> bag = new ArrayBag<>();
-        int result = 0;
-        for (int i = 0; i < 25; i++) {
-            bag.add(i);
-            result += i ;
-        }
-        Object[] temp = bag.toArray();
-        for (Object o : temp) {
-            result -= (Integer) o;
-        }
-        System.out.println(result);
     }
 
     /*
